@@ -20,7 +20,7 @@
 
 	dvb {
 		compatible = "amlogic,dvb";
-		dev_name = "meecool";
+		dev_name = "dvb";
 		status = "okay";
 		fec_reset_gpio-gpios = <&gpio GPIOY_13 GPIO_ACTIVE_HIGH>;
 		power_ctrl_gpio-gpios = <&gpio GPIOY_11 GPIO_ACTIVE_LOW>;
@@ -46,7 +46,7 @@
 		dtv_demod0_i2c_addr = <0x14>;
 		dtv_demod0_reset_value = <0>;
 		dtv_demod0_reset_gpio-gpios = <&gpio GPIOY_13 GPIO_ACTIVE_HIGH>;
-		dtv_demod0_antoverload_gpio-gpios = <&gpio GPIOY_11 GPIO_ACTIVE_HIGH>; 	/* 5V output for active antenna */
+		dtv_demod0_antoverload_gpio-gpios = <&gpio GPIOY_11 GPIO_ACTIVE_LOW>; 	/* 5V output for active antenna */
 		fe0_dtv_demod = <0>;
 		fe0_ts = <0>;
 		fe0_dev = <0>;
